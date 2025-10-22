@@ -532,3 +532,113 @@ section {
         grid-template-columns: 1fr;
     }
 }
+
+.services {
+    padding: 70px 9%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #1f242d;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 20px 0;
+    width: 100%;
+}
+
+.service-box {
+    background-image: url('./images/fondoweb.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: 2px solid #9D00FF;
+    transition: .5s ease;
+    position: relative;
+}
+
+/* Agregar overlay para mejorar legibilidad del texto */
+.service-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(31, 36, 45, 0.85); /* Color oscuro semi-transparente */
+    border-radius: 1rem;
+}
+
+/* Asegurar que el contenido esté por encima del overlay */
+.service-box > * {
+    position: relative;
+    z-index: 1;
+}
+
+.service-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(157, 0, 255, 0.2);
+}
+
+.service-box i {
+    font-size: 4rem;
+    color: #9D00FF;
+    margin-bottom: 1rem;
+}
+
+.service-box h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.service-box p {
+    color: #bbbbbb;
+    margin-bottom: 1.5rem;
+    font-size: .9rem;
+}
+
+.service-list {
+    list-style: none;
+    text-align: left;
+    color: #fff;
+}
+
+.service-list li {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.service-list i {
+    font-size: 1.2rem;
+    color: #9D00FF;
+    margin: 0;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .service-box {
+        padding: 1.5rem;
+    }
+
+    .service-box i {
+        font-size: 3rem;
+    }
+
+    .service-box h3 {
+        font-size: 1.3rem;
+    }
+}
