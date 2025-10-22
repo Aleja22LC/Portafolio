@@ -642,3 +642,43 @@ section {
         font-size: 1.3rem;
     }
 }
+
+.footer {
+    background: #1f242d;
+    padding: 50px 9%;
+    text-align: center;
+    color: #fff;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer p {
+    color: #bbbbbb;
+    margin: 20px 0;
+}
+
+.footer .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25D366; /* Color de WhatsApp */
+    border-color: #25D366;
+}
+
+.footer .btn:hover {
+    background: #128C7E; /* Color más oscuro de WhatsApp */
+    border-color: #128C7E;
+}
+
+.footer .btn i {
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        padding: 30px 5%;
+    }
+}
