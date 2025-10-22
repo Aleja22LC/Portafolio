@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    background: #1f242d;
 }
 
 
@@ -28,6 +29,9 @@ a {
     opacity: 0;
     animation: show-content 1.5s linear forwards;
     animation-delay: 1.2s;
+}
+:root {
+    --nav-offset: 90px; /* ajusta según altura real del navbar */
 }
 
 @keyframes show-content {
@@ -74,6 +78,10 @@ a {
     background: #fff;
     margin: 5px 0;
     transition: 0.4s;
+}
+
+section {
+    scroll-margin-top: var(--nav-offset);
 }
 
 /* Actualizar las media queries */
@@ -417,5 +425,110 @@ a {
     .home-img .img-box {
         width: 85vw;
         height: 85vw;
+    }
+}
+
+.portfolio {
+    background: #1f242d;
+    padding: 70px 9%;
+    color: #fff;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 50px;
+}
+
+.heading span {
+    color: #9D00FF;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 20px 0;
+}
+
+.portfolio-box {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 1rem rgba(0,0,0,.1);
+    height: 250px;
+    background: #929fb7;
+}
+
+.portfolio-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s ease;
+}
+
+.portfolio-box:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-layer {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+    transition: .5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer {
+    bottom: 0;
+}
+
+.portfolio-layer h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-layer p {
+    font-size: .8rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.portfolio-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #9D00FF;
+    font-size: 3.5rem;
+    transition: .3s;
+}
+
+.portfolio-links a:hover {
+    background: #9D00FF;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 768px) {
+    .heading {
+        font-size: 3rem;
+    }
+    
+    .portfolio-container {
+        grid-template-columns: 1fr;
     }
 }
