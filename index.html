@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PORTAFOLIO</title>
+    <title data-i18n="page.title">PORTAFOLIO</title>
     <link
       href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css"
       rel="stylesheet"
@@ -17,17 +17,21 @@
   </head>
   <body>
     <nav class="navbar">
-      <a href="#" class="logo">Portafolio.</a>
+      <a href="#" class="logo" data-i18n="nav.logo">Portafolio.</a>
+      <button id="lang-toggle" class="lang-toggle">EN</button>
       <div class="menu-icon">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
       </div>
+      
       <ul>
-        <li class="active"><a href="#home">About</a></li>
-        <li><a href="#portfolio">Portafolio</a></li>
-        <li ><a href="#services">Servicios</a></li>
-        <li ><a href="#contact">Contactame</a></li>
+        <li class="active">
+          <a href="#home" data-i18n="nav.about">Sobre Mi</a>
+        </li>
+        <li><a href="#portfolio" data-i18n="nav.portfolio">Portafolio</a></li>
+        <li><a href="#services" data-i18n="nav.services">Servicios</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contactame</a></li>
       </ul>
     </nav>
 
@@ -42,24 +46,41 @@
 
     <section class="home" id="home">
       <div class="home-info">
-        <h1><span>Alejandra Leon</span></h1>
+        <h1><span data-i18n="home.name">Alejandra Leon</span></h1>
         <h2>
-          Soy
-          <span class="typing" style="--i: 2" data-text="Fronted Developer"
-            >Fronted Developer</span
+          <span data-i18n="home.intro">Soy</span>
+           <span class="typing" data-text="Desarrolladora Frontend" data-i18n="home.role">Desarrolladora frontend</span
           >
-          <span class="typing" style="--i: 1" data-text="Designer"
-            >Designer</span
+          <span
+            class="typing"
+            style="--i: 1"
+            data-text="Designer"
+            data-i18n="home.role2"
+            >Diseñadora</span
           >
         </h2>
-        <p>
-          Bienvenido a mi portafolio. Aquí encontrarás información sobre mi trabajo, habilidades y proyectos.
+        <p data-i18n="home.welcome">
+          Bienvenido a mi portafolio. Aquí encontrarás información sobre mi
+          trabajo, habilidades y proyectos.
         </p>
         <div class="btn-sci">
-          <a href="docs/Curriculum Lina Alejandra León.pdf" class="btn" download="CV_AlejandraLeon.pdf">Descargar CV</a>
+          <a
+            href="docs/Curriculum Lina Alejandra León.pdf"
+            class="btn"
+            download="CV_AlejandraLeon.pdf"
+            data-i18n="btn.download"
+            >Descargar CV</a
+          >
           <div class="sci">
-            <a href="https://github.com/Aleja22LC" target="_blank" class=""><i class="bxl bx-github"></i> </a>
-            <a href="https://www.linkedin.com/in/lina-alejandra-leon-cifuentes/" target="_blank" class=""><i class="bxl bx-linkedin-square"></i> </a>
+            <a href="https://github.com/Aleja22LC" target="_blank" class=""
+              ><i class="bxl bx-github"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/lina-alejandra-leon-cifuentes/"
+              target="_blank"
+              class=""
+              ><i class="bxl bx-linkedin-square"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -72,131 +93,199 @@
       </div>
     </section>
     <section class="portfolio" id="portfolio">
-    <h2 class="heading">Ultimos <span>Proyectos</span></h2>
-    
-    <div class="portfolio-container">
+      <h2 class="heading" data-i18n="portfolio.heading">
+        Ultimos <span>Proyectos</span>
+      </h2>
+
+      <div class="portfolio-container">
         <!-- Proyecto 1 -->
         <div class="portfolio-box">
-            <img src="images/Proyecto 1.png" alt="Proyecto 1">
-            <div class="portfolio-layer">
-                <h4>Card Validation</h4>
-                <p>El algoritmo de Luhn, es un método de suma de verificación, se utiliza para validacion de números de identificación; tales como el IMEI de los celulares, tarjetas de crédito, etc. </p>
-                <div class="portfolio-links">
-                    <a href="https://www.linkedin.com/in/lina-alejandra-leon-cifuentes/" target="_blank" class=""><i class='bxl  bx-chrome'></i>  </a>
-                    <a href="https://github.com/Aleja22LC/BOG005-card-validation" target="_blank" class=""><i class="bxl bx-github"></i> </a>
-            
-                </div>
+          <img src="images/Proyecto 1.png" alt="Proyecto 1" />
+          <div class="portfolio-layer">
+            <h4 data-i18n="project1.title">Validacion de Tarjeta</h4>
+            <p data-i18n="project1.desc">
+              El algoritmo de Luhn, es un método de suma de verificación, se
+              utiliza para validacion de números de identificación; tales como
+              el IMEI de los celulares, tarjetas de crédito, etc.
+            </p>
+            <div class="portfolio-links">
+              <a
+                href="https://aleja22lc.github.io/BOG005-card-validation/src/"
+                target="_blank"
+                class=""
+                ><i class="bxl bx-chrome"></i>
+              </a>
+              <a
+                href="https://github.com/Aleja22LC/BOG005-card-validation"
+                target="_blank"
+                class=""
+                ><i class="bxl bx-github"></i>
+              </a>
             </div>
+          </div>
         </div>
-
         <!-- Proyecto 2 -->
         <div class="portfolio-box">
-            <img src="images/proyecto 2.png" alt="Proyecto 2">
-            <div class="portfolio-layer">
-                <h4>Olimpics Lovers</h4>
-                <p>Pagina basada en el analisis de data obtenida de un tema especifico, en este caso los Olimpicos de Rio de Janeiro 2016. </p>
-                <div class="portfolio-links">
-                    <a href="https://aleja22lc.github.io/BOG005-data-lovers/src/" target="_blank" class=""><i class='bxl  bx-chrome'></i>  </a>
-                    <a href="https://github.com/Aleja22LC/BOG005-data-lovers" target="_blank" class=""><i class="bxl bx-github"></i> </a>
-            
-                </div>
+          <img src="images/proyecto 2.png" alt="Proyecto 2" />
+          <div class="portfolio-layer">
+            <h4 data-i18n="project2.title">Olympics Lovers</h4>
+            <p data-i18n="project2.desc">Pagina basada en el analisis de data obtenida de un tema especifico, en este caso los Olimpicos de Rio de Janeiro 2016.</p>
+            <div class="portfolio-links">
+              <a
+                href="https://aleja22lc.github.io/BOG005-data-lovers/src/"
+                target="_blank"
+                class=""
+                ><i class="bxl bx-chrome"></i>
+              </a>
+              <a
+                href="https://github.com/Aleja22LC/BOG005-data-lovers"
+                target="_blank"
+                class=""
+                ><i class="bxl bx-github"></i>
+              </a>
             </div>
+          </div>
         </div>
-    <!-- Proyecto 3 -->
+        <!-- Proyecto 3 -->
         <div class="portfolio-box">
-            <img src="images/proyecto 3.png" alt="Proyecto 3">
-            <div class="portfolio-layer">
-                <h4>Social Network</h4>
-                <p>"Enjoy The world" una red social que quiere ayudar a miles de usuarios alrededor del mundo a dar a conocer las diferentes fiestas que se celebran en sus ciudades, buscando fomentar el turismo.</p>
-                <div class="portfolio-links">
-                    <a href="https://alesalazard.github.io/Enjoy-the-World/src" target="_blank" class=""><i class='bxl  bx-chrome'></i>  </a>
-                    <a href="https://github.com/Aleja22LC/BOG005-social-network" target="_blank" class=""><i class="bxl bx-github"></i> </a>
-            
-                </div>
+          <img src="images/proyecto 3.png" alt="Proyecto 3" />
+          <div class="portfolio-layer">
+            <h4 data-i18n="project3.title">Social Network</h4>
+            <p data-i18n="project3.desc">
+              "Enjoy The world" una red social que quiere ayudar a miles de
+              usuarios alrededor del mundo a dar a conocer las diferentes
+              fiestas que se celebran en sus ciudades, buscando fomentar el
+              turismo.
+            </p>
+            <div class="portfolio-links">
+              <a
+                href="https://alesalazard.github.io/Enjoy-the-World/src"
+                target="_blank"
+                class=""
+                ><i class="bxl bx-chrome"></i>
+              </a>
+              <a
+                href="https://github.com/Aleja22LC/BOG005-social-network"
+                target="_blank"
+                class=""
+                ><i class="bxl bx-github"></i>
+              </a>
             </div>
+          </div>
         </div>
-    <!-- Proyecto 4 -->
+        <!-- Proyecto 4 -->
         <div class="portfolio-box">
-            <img src="images/Proyecto 4.png" alt="Proyecto 4">
-            <div class="portfolio-layer">
-                <h4>MD Links</h4>
-                <p>Es una librería en JS que maneja una interfaz de  comandos (CLI), su fin es extraer y validar los links que se encuentran dentro de archivos MarkDown (.md). Se obtendran datos como, la cantidan total de links, el total de links unicos y el total de links rotos, dentro de los archivos.</p>
-                <div class="portfolio-links">
-                    <a href="https://www.npmjs.com/package/linaleon-md-links" target="_blank" class=""><i class='bxl  bx-npm'  ></i>   </a>
-                    <a href="https://github.com/Aleja22LC/BOG005-md-links" target="_blank" class=""><i class="bxl bx-github"></i> </a>
-            
-                </div>
+          <img src="images/Proyecto 4.png" alt="Proyecto 4" />
+          <div class="portfolio-layer">
+            <h4 data-i18n="project4.title">MD Links</h4>
+            <p data-i18n="project4.desc" >
+              Es una librería en JS que maneja una interfaz de comandos (CLI),
+              su fin es extraer y validar los links que se encuentran dentro de
+              archivos MarkDown (.md). Se obtendran datos como, la cantidan
+              total de links, el total de links unicos y el total de links
+              rotos, dentro de los archivos.
+            </p>
+            <div class="portfolio-links">
+              <a
+                href="https://www.npmjs.com/package/linaleon-md-links"
+                target="_blank"
+                class=""
+                ><i class="bxl bx-npm"></i>
+              </a>
+              <a
+                href="https://github.com/Aleja22LC/BOG005-md-links"
+                target="_blank"
+                class=""
+                ><i class="bxl bx-github"></i>
+              </a>
             </div>
+          </div>
         </div>
         <!-- Proyecto 5 -->
         <div class="portfolio-box">
-            <img src="images/proyecto 5.png" alt="Proyecto 5">
-            <div class="portfolio-layer">
-                <h4>Burguer Queen Api Client</h4>
-                <p>Diseño de una plataforma web para los clientes internos de un restaurante de comidas rapidas. (Meseros, cocineros, administrador). </p>
-                <div class="portfolio-links">
-                    <a href="https://www.figma.com/proto/NcWB6kPvdm6pPQoC9cPxFs/BurgerQueen?node-id=0-1&t=FJi3nBpeOSNPgQAh-1" target="_blank" class=""><i class='bxl  bx-figma'  ></i>   </a>
-                    <a href="https://github.com/Aleja22LC/BOG005-burger-queen-api-client" target="_blank" class=""><i class="bxl bx-github"></i> </a>
-            
-                </div>
+          <img src="images/proyecto 5.png" alt="Proyecto 5" />
+          <div class="portfolio-layer">
+            <h4 data-i18n="project5.title">Burguer Queen Api Client</h4>
+            <p data-i18n="project5.desc">
+              Diseño de una plataforma web para los clientes internos de un
+              restaurante de comidas rapidas. (Meseros, cocineros,
+              administrador).
+            </p>
+            <div class="portfolio-links">
+              <a
+                href="https://www.figma.com/proto/NcWB6kPvdm6pPQoC9cPxFs/BurgerQueen?node-id=0-1&t=FJi3nBpeOSNPgQAh-1"
+                target="_blank"
+                class=""
+                ><i class="bxl bx-figma"></i>
+              </a>
+              <a
+                href="https://github.com/Aleja22LC/BOG005-burger-queen-api-client"
+                target="_blank"
+                class=""
+                ><i class="bxl bx-github"></i>
+              </a>
             </div>
+          </div>
         </div>
         <!-- Proyecto 6 -->
         <div class="portfolio-box">
-            <img src="images/Proyecto 6..png" alt="Proyecto 6">
-            <div class="portfolio-layer">
-                <h4>Diseño basico CV Digital</h4>
-                <p>Diseño basico de hojas de vida o curriculum virtuales.</p>
-                <div class="portfolio-links">
-                    <a href="https://www.figma.com/design/AXlz58FxQlvHORN6XoML6A/Web-Stefy?node-id=0-1&p=f&t=ceeXae42aCxQwAPm-0" target="_blank" class=""><i class='bxl  bx-figma'  ></i>  </a>
-                                
-                </div>
+          <img src="images/Proyecto 6..png" alt="Proyecto 6" />
+          <div class="portfolio-layer">
+            <h4 data-i18n="project6.title">Diseño basico CV Digital</h4>
+            <p data-i18n="project6.desc">Diseño basico de hojas de vida o curriculum virtuales.</p>
+            <div class="portfolio-links">
+              <a
+                href="https://www.figma.com/design/AXlz58FxQlvHORN6XoML6A/Web-Stefy?node-id=0-1&p=f&t=ceeXae42aCxQwAPm-0"
+                target="_blank"
+                class=""
+                ><i class="bxl bx-figma"></i>
+              </a>
             </div>
+          </div>
         </div>
 
         <!-- Puedes agregar más proyectos siguiendo el mismo formato -->
-    </div>
-</section>
-<section class="services" id="services">
-    <h2 class="heading">Mis <span>Servicios</span></h2>
-    
-    <div class="services-container">
+      </div>
+    </section>
+    <section class="services" id="services">
+      <h2 class="heading" data-i18n="services.heading">Mis <span>Servicios</span></h2>
+
+      <div class="services-container">
         <!-- Servicio 1: Diseño Web -->
         <div class="service-box">
-            <i class='bx bx-palette'></i>
-            <h3>Diseño Web</h3>
-            <p>Diseño de interfaces modernas y atractivas enfocadas en la experiencia del usuario. Creación de mockups y prototipos interactivos.</p>
-            <ul class="service-list">
-                <li><i class='bx bx-check-circle'></i> Diseño UI/UX</li>
-                <li><i class='bx bx-check-circle'></i> Prototipos en Figma</li>
-                <li><i class='bx bx-check-circle'></i> Diseño Responsive</li>
-                <li><i class='bx bx-check-circle'></i> Identidad Visual</li>
-            </ul>
+          <i class='bx bx-palette'></i>
+          <h3 data-i18n="service1.title">Diseño Web</h3>
+          <p data-i18n="service1.desc">Diseño de interfaces modernas y atractivas enfocadas en la experiencia del usuario. Creación de mockups y prototipos interactivos.</p>
+          <ul class="service-list">
+            <li data-i18n="service1.item1"><i class='bx bx-check-circle'></i> Diseño UI/UX</li>
+            <li data-i18n="service1.item2"><i class='bx bx-check-circle'></i> Prototipos en Figma</li>
+            <li data-i18n="service1.item3"><i class='bx bx-check-circle'></i> Diseño Responsive</li>
+            <li data-i18n="service1.item4"><i class='bx bx-check-circle'></i> Identidad Visual</li>
+          </ul>
         </div>
 
         <!-- Servicio 2: Desarrollo Web -->
         <div class="service-box">
-            <i class='bx bx-code-alt'></i>
-            <h3>Desarrollo Web</h3>
-            <p>Desarrollo de sitios web profesionales, optimizados y totalmente responsivos utilizando las últimas tecnologías.</p>
-            <ul class="service-list">
-                <li><i class='bx bx-check-circle'></i> HTML5 & CSS3</li>
-                <li><i class='bx bx-check-circle'></i> JavaScript</li>
-                <li><i class='bx bx-check-circle'></i> Sitios Responsive</li>
-                <li><i class='bx bx-check-circle'></i> SEO Básico</li>
-            </ul>
+          <i class='bx bx-code-alt'></i>
+          <h3 data-i18n="service2.title">Desarrollo Web</h3>
+          <p data-i18n="service2.desc">Desarrollo de sitios web profesionales, optimizados y totalmente responsivos utilizando las últimas tecnologías.</p>
+          <ul class="service-list">
+            <li data-i18n="service2.item1"><i class='bx bx-check-circle'></i> HTML5 & CSS3</li>
+            <li data-i18n="service2.item2"><i class='bx bx-check-circle'></i> JavaScript</li>
+            <li data-i18n="service2.item3"><i class='bx bx-check-circle'></i> Sitios Responsive</li>
+            <li data-i18n="service2.item4"><i class='bx bx-check-circle'></i> SEO Básico</li>
+          </ul>
         </div>
-    </div>
-</section>
-<footer class="footer" id="contact">
-    <div class="footer-content">
-        <h2 class="heading">Contacta<span>Me</span></h2>
-        <p>¿Tienes un proyecto en mente? ¡Hablemos!</p>
-        <a href="https://wa.me/+573223966102?text=Hola,%20me%20interesa%20trabajar%20contigo%20charlemos." class="btn" target="_blank">
-             WhatsApp
-        </a>
-    </div>
-</footer>
-<script src="script.js"></script>
+      </div>
+    </section>
+
+    <footer class="footer" id="contact">
+      <div class="footer-content">
+        <h2 class="heading" data-i18n="footer.heading">Contacta <span>Me</span></h2>
+        <p data-i18n="footer.desc">¿Tienes un proyecto en mente? ¡Hablemos!</p>
+        <a href="https://wa.me/+573223966102?text=Hola,%20me%20interesa%20trabajar%20contigo%20charlemos." class="btn" target="_blank" data-i18n="footer.button">WhatsApp</a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>

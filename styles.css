@@ -148,6 +148,36 @@ section {
     margin-top: -10px;
 }
 
+.home-info h2 .typing {
+    position: relative;
+    display: inline-block;
+    margin-left: 5px;
+    height: 1.2em;
+    min-width: 200px; /* Ancho mínimo para evitar saltos */
+}
+
+.home-info h2 .typing::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #9D00FF;
+    border-right: 2px solid #9D00FF;
+    overflow: hidden;
+    animation: typing 6s steps(30) infinite;
+}
+
+@keyframes typing {
+    0%, 90%, 100% {
+        width: 0;
+    }
+    30%, 60% {
+        width: 100%;
+    }
+}
+
 .home-info h2 span {
     position: relative;
     display: inline-block;
@@ -155,6 +185,19 @@ section {
     -webkit-text-stroke: .7px #9D00FF;
     animation: display-text 16s linear infinite;
     animation-delay: calc(-4s * var(--i));
+}
+
+/* Hacer que el texto "Soy" (data-i18n="home.intro") sea blanco y estático */
+.home-info h2 span[data-i18n="home.intro"] {
+    color: #ffffff;
+    display: inline-block;
+    font-weight: 600;
+    margin-right: 8px;
+    position: relative;
+    z-index: 2;
+    /* Anular cualquier animación heredada */
+    animation: none !important;
+    -webkit-animation: none !important;
 }
 
 @keyframes display-text {
@@ -680,5 +723,33 @@ section {
 @media screen and (max-width: 768px) {
     .footer {
         padding: 30px 5%;
+    }
+}
+
+.lang-toggle {
+    background: transparent;
+    border: 2px solid rgba(157, 0, 255, 0.2);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-left: auto; /* Añadir esto */
+    margin-right: 20px; /* Añadir esto */
+    z-index: 101; /* Añadir esto */
+}
+
+.lang-toggle:hover {
+    background: rgba(157, 0, 255, 0.1);
+    border-color: rgba(157, 0, 255, 0.4);
+}
+
+@media screen and (max-width: 768px) {
+    .lang-toggle {
+        position: absolute; /* Añadir esto */
+        right: 60px; /* Añadir esto */
+        top: 50%; /* Añadir esto */
+        transform: translateY(-50%); /* Añadir esto */
     }
 }
